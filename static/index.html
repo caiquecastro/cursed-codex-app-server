@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex Wrapper Inspector</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel sessions">
+        <div class="panel-header">
+          <h1>Codex Wrapper</h1>
+          <p>Local prompt and response capture for `codex app-server`.</p>
+        </div>
+        <div id="session-list" class="session-list"></div>
+      </section>
+      <section class="panel details">
+        <div class="panel-header">
+          <h2 id="session-title">Select a session</h2>
+          <p id="session-meta">No session selected.</p>
+        </div>
+        <div id="message-list" class="message-list"></div>
+      </section>
+      <aside class="panel raw">
+        <div class="panel-header">
+          <h2>Raw JSON</h2>
+          <p>Original payload body from the proxy boundary.</p>
+        </div>
+        <pre id="raw-payload" class="raw-payload">Select a message to inspect raw JSON.</pre>
+      </aside>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+  </html>
